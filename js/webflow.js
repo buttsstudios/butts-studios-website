@@ -18227,7 +18227,7 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
     // var url = data.action.replace('/post?', '/post-json?') + '&c=?'; // Add special param to prevent bot signups
-
+    var url = data.action;
     var userId = url.indexOf('u=') + 2;
     userId = url.substring(userId, url.indexOf('&', userId));
     var listId = url.indexOf('id=') + 3;
