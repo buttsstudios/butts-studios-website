@@ -18045,7 +18045,6 @@ Webflow.define('forms', module.exports = function ($, _) {
 
     $doc.on('submit', namespace + ' form', function (evt) {
       var data = $.data(this, namespace);
-
       if (data.handler) {
         data.evt = evt;
         data.handler(data);
