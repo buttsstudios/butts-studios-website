@@ -18236,7 +18236,10 @@ Webflow.define('forms', module.exports = function ($, _) {
     $.ajax({
       url: url,
       data: payload,
-      dataType: 'jsonp'
+      // dataType: 'jsonp'
+      dataType: 'json',
+      contentType: 'application/json',
+      responseType:'application/json'
     }).done(function (resp) {
       data.success = resp.result === 'success' || /already/.test(resp.msg);
 
