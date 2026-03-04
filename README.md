@@ -14,7 +14,7 @@ Creative production studio - animation, film, games
 ## Development
 
 ```bash
-# Open index.html in browser\npython -m http.server 3000
+python -m http.server 3000
 ```
 
 ## Deployment
