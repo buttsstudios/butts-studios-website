@@ -340,12 +340,50 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:56px 
 .reveal.visible { opacity:1; transform:translateY(0); }
 .reveal-delay-1 { transition-delay:.1s; } .reveal-delay-2 { transition-delay:.2s; } .reveal-delay-3 { transition-delay:.3s; } .reveal-delay-4 { transition-delay:.4s; }
 
+/* FEATURED CLIENT SECTION */
+.featured-client-section { background:linear-gradient(180deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 100%); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.featured-client-header { text-align:center; margin-bottom:50px; }
+.featured-client-header .section-sub { margin:14px auto 20px; }
+.featured-client-meta { display:flex; justify-content:center; gap:40px; margin-top:24px; }
+.fc-meta-item { font-size:.9rem; color:var(--muted); }
+.fc-meta-item strong { color:var(--gold); font-weight:700; margin-right:4px; }
+
+.fc-projects-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.fc-project-card { position:relative; border-radius:var(--radius); overflow:hidden; background:var(--surface2); border:1px solid var(--border); transition:transform .3s, box-shadow .3s; }
+.fc-project-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(245,184,0,.15); }
+.fc-project-card img { width:100%; height:180px; object-fit:cover; display:block; }
+.fc-project-card.fc-project-featured { grid-column:span 2; grid-row:span 2; }
+.fc-project-card.fc-project-featured img { height:100%; min-height:380px; }
+.fc-project-info { padding:16px; }
+.fc-project-info h4 { font-size:1rem; font-weight:700; color:var(--text); margin-bottom:4px; }
+.fc-project-info p { font-size:.8rem; color:var(--muted); }
+.fc-project-info .fc-badge { display:inline-block; background:var(--grad-flat); color:var(--warm-black); font-size:.65rem; font-weight:700; padding:3px 10px; border-radius:4px; margin-top:8px; }
+
+.fc-project-more { display:flex; align-items:center; justify-content:center; min-height:180px; background:var(--surface); }
+.fc-project-more .fc-more-content { text-align:center; }
+.fc-more-number { font-size:3rem; font-weight:900; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display:block; }
+.fc-project-more p { color:var(--muted); font-size:.9rem; margin-top:4px; }
+.fc-subprojects { display:block; font-size:.75rem; color:var(--gold-dim); margin-top:8px; max-width:140px; }
+
+.featured-client-cta { text-align:center; margin-top:40px; }
+
+/* CLIENT LOGOS */
+.client-logo-img { height:28px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:.7; transition:opacity .3s; margin:0 20px; }
+.client-logo-img:hover { opacity:1; }
+
+/* PORTFOLIO WITH IMAGES */
+.port-item .port-img { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; }
+.port-client-tag { position:absolute; top:12px; left:12px; background:rgba(245,184,0,.9); color:var(--warm-black); font-size:.65rem; font-weight:700; padding:4px 10px; border-radius:4px; z-index:5; }
+
 /* RESPONSIVE */
 @media (max-width:1024px) {
   .services-grid { grid-template-columns:repeat(2,1fr); }
   .sub-grid { grid-template-columns:repeat(3,1fr); }
   .footer-inner { grid-template-columns:1fr 1fr; gap:28px; }
   .port-grid.layout-brand { grid-template-columns:repeat(3,1fr); }
+  .fc-projects-grid { grid-template-columns:repeat(3,1fr); }
+  .fc-project-card.fc-project-featured { grid-column:span 1; grid-row:span 1; }
+  .fc-project-card.fc-project-featured img { height:180px; }
 }
 @media (max-width:768px) {
   .nav-links,.nav-cta .btn { display:none; }
@@ -362,6 +400,8 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:56px 
   .footer-inner { grid-template-columns:1fr; }
   .lb-nav { display:none; }
   .ptab { padding:14px 18px; font-size:.8rem; }
+  .fc-projects-grid { grid-template-columns:repeat(2,1fr); }
+  .featured-client-meta { flex-direction:column; gap:12px; }
 }
 @media (max-width:480px) {
   .port-grid { grid-template-columns:1fr !important; }
@@ -369,4 +409,5 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:56px 
   .process-track { grid-template-columns:1fr; }
   body { cursor:auto; }
   #cursor-dot,#cursor-ring { display:none; }
+  .fc-projects-grid { grid-template-columns:1fr; }
 }

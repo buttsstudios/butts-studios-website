@@ -48,7 +48,7 @@ function renderLb(){
   const lbM=document.getElementById('lbMedia');
   if(img){lbM.innerHTML=`<img src="${img.src}" alt="${title}" loading="lazy">`;}
   else{const icon=item.querySelector('.ph-icon')?.textContent||'✦';lbM.innerHTML=`<div style="width:600px;max-width:90vw;height:340px;background:var(--surface2);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:3rem;">${icon}</div>`;}
-  document.getElementById('lbInfo').innerHTML=`<h3>${title}</h3><p>${type}${desc?' — '+desc:''}</p>`;
+  document.getElementById('lbInfo').innerHTML=`<h3>${title}</h3><p>${item.dataset.client?'<span style="color:var(--gold);">'+item.dataset.client+'</span> — '}${type}${desc?' — '+desc:''}</p>`;
   document.getElementById('lbCounter').textContent=`${lbIdx+1} / ${lbItems.length}`;
 }
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
