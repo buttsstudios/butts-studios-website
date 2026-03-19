@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StrideCash — Butts Studios</title>
+  <meta name="description" content="StrideCash payment app development. Mobile-first financial application design and development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero { min-height:70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 24px 100px; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 20%, rgba(0,200,100,.2) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(0,150,75,.15) 0%, transparent 60%); }
+    .page-hero-content { position:relative; z-index:2; }
+    .page-client-logo { height:60px; width:auto; margin-bottom:24px; filter:brightness(0) invert(1); }
+    .page-title { font-size:clamp(2.5rem,6vw,4.5rem); font-weight:900; line-height:1.05; margin-bottom:16px; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-tagline { font-size:1.2rem; color:var(--muted); margin-bottom:40px; }
+    .hero-stats { display:flex; justify-content:center; gap:60px; flex-wrap:wrap; }
+    .hero-stat { text-align:center; }
+    .hero-stat-num { font-size:3rem; font-weight:900; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .hero-stat-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.15em; margin-top:4px; }
+
+    .section { padding:100px 0; }
+    .section-alt { background:var(--surface); }
+    .section-dark { background:var(--bg2); }
+    .section-header { text-align:center; margin-bottom:60px; }
+    .section-eyebrow { font-size:.7rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:12px; display:block; }
+    .section-title { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-sub { color:var(--muted); max-width:600px; margin:16px auto 0; }
+
+    .showcase-img { width:100%; max-width:400px; border-radius:var(--radius); margin:0 auto 24px; border:1px solid var(--border); display:block; }
+
+    .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:32px; }
+    .feature-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:32px; }
+    .feature-card h4 { font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:12px; }
+    .feature-card p { font-size:.9rem; color:var(--muted); line-height:1.7; }
+
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+    .service-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:32px; }
+    .service-card h4 { font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:12px; }
+    .service-card p { font-size:.9rem; color:var(--muted); line-height:1.7; }
+
+    .cta-section { text-align:center; padding:100px 24px; background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%); }
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../../#hero" class="nav-logo">
+      <img src="../../images/logo.png" alt="Butts Studios" class="nav-logo-img" />
+      <span class="nav-logo-text"><span>Butts</span> Studios</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../#services">Services</a></li>
+      <li><a href="../../#portfolio">Work</a></li>
+      <li><a href="../">Clients</a></li>
+      <li><a href="../../#subsidiaries">Projects</a></li>
+      <li><a href="../../#process">Process</a></li>
+      <li><a href="../../#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="../../#contact" class="btn btn-primary" style="padding:10px 20px;font-size:.82rem;">Get in Touch</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../../#services" class="mobile-link">Services</a>
+  <a href="../../#portfolio" class="mobile-link">Work</a>
+  <a href="../" class="mobile-link">Clients</a>
+  <a href="../../#subsidiaries" class="mobile-link">Projects</a>
+  <a href="../../#process" class="mobile-link">Process</a>
+  <a href="../../#about" class="mobile-link">About</a>
+  <a href="../../#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <h1 class="page-title">StrideCash</h1>
+    <p class="page-tagline">Mobile Payment Application Design & Development</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">Mobile</div>
+        <div class="hero-stat-label">First Design</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">iOS</div>
+        <div class="hero-stat-label">App</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">Payment</div>
+        <div class="hero-stat-label">Platform</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Project Overview</span>
+      <h2 class="section-title">Payment Platform</h2>
+      <p class="section-sub">StrideCash is a mobile-first payment application providing seamless financial transactions.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h4>Mobile-First Design</h4>
+        <p>Optimized for iOS with touch-friendly interfaces and intuitive navigation for everyday payments.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Payment Processing</h4>
+        <p>Secure payment infrastructure enabling quick and reliable money transfers.</p>
+      </div>
+      <div class="feature-card">
+        <h4>User Dashboard</h4>
+        <p>Clean interface for tracking transactions, balances, and payment history.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">App Preview</span>
+      <h2 class="section-title">Mobile Interface</h2>
+    </div>
+    <img src="./stridecashhomeiphone.png" alt="StrideCash Home Screen" class="showcase-img" />
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Services Delivered</span>
+      <h2 class="section-title">Development</h2>
+      <p class="section-sub">Full mobile application development for iOS.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h4>UI/UX Design</h4>
+        <p>Mobile-first interface design optimized for touch interactions and clarity.</p>
+      </div>
+      <div class="service-card">
+        <h4>App Development</h4>
+        <p>Native iOS application development for reliable performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 style="font-size:2rem;font-weight:800;margin-bottom:12px;">Need a payment app?</h2>
+  <p style="color:var(--muted);margin-bottom:28px;">Let's build your mobile payment platform.</p>
+  <a href="../../#contact" class="btn btn-primary">Start a Project ↗</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../../#hero" class="nav-logo" style="display:inline-flex"><img src="../../images/logo.png" alt="Butts Studios" class="footer-logo-img" /><span class="nav-logo-text"><span>Butts</span> Studios</span></a>
+        <p>Creating Stories, Building Worlds.</p>
+      </div>
+      <div class="footer-col"><h4>Pillars</h4><ul><li><a href="../../#services">Services</a></li><li><a href="../../#portfolio">Work</a></li><li><a href="../">Clients</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="../../#about">About</a></li><li><a href="../../#process">Process</a></li><li><a href="../../#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Butts Studios. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>
