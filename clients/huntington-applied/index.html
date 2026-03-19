@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huntington Applied — Butts Studios</title>
+  <meta name="description" content="Complete visual identity system and brand design for Huntington Applied's portfolio of 16 products spanning biological intelligence, simulation networks, and enterprise software." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero { min-height:70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 24px 100px; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 20%, rgba(245,184,0,.15) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(212,160,23,.1) 0%, transparent 60%); }
+    .page-hero-content { position:relative; z-index:2; }
+    .page-client-logo { height:60px; width:auto; margin-bottom:24px; filter:brightness(0) invert(1); }
+    .page-title { font-size:clamp(2.5rem,6vw,4.5rem); font-weight:900; line-height:1.05; margin-bottom:16px; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-tagline { font-size:1.2rem; color:var(--muted); margin-bottom:40px; }
+    .hero-stats { display:flex; justify-content:center; gap:60px; flex-wrap:wrap; }
+    .hero-stat { text-align:center; }
+    .hero-stat-num { font-size:3rem; font-weight:900; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .hero-stat-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.15em; margin-top:4px; }
+
+    .section { padding:100px 0; }
+    .section-alt { background:var(--surface); }
+    .section-dark { background:var(--bg2); }
+    .section-header { text-align:center; margin-bottom:60px; }
+    .section-eyebrow { font-size:.7rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:12px; display:block; }
+    .section-title { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .section-sub { color:var(--muted); max-width:600px; margin:16px auto 0; }
+
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:32px; }
+    .project-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform .3s, box-shadow .3s; }
+    .project-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(245,184,0,.12); }
+    .project-card-img { width:100%; height:200px; object-fit:cover; }
+    .project-card-body { padding:24px; }
+    .project-card-logo { height:28px; width:auto; margin-bottom:12px; filter:brightness(0) invert(1); }
+    .project-card-title { font-size:1.25rem; font-weight:700; color:var(--text); margin-bottom:4px; }
+    .project-card-type { font-size:.8rem; color:var(--gold); margin-bottom:12px; }
+    .project-card-desc { font-size:.85rem; color:var(--muted); line-height:1.6; }
+    .project-card.has-logo .project-card-img { height:160px; padding:20px; background:var(--surface); display:flex; align-items:center; justify-content:center; }
+    .project-card.has-logo .project-card-img img { max-height:120px; max-width:100%; object-fit:contain; }
+
+    .logo-showcase { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:32px; }
+    .logo-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:40px 24px; text-align:center; transition:transform .3s, border-color .3s; }
+    .logo-card:hover { transform:translateY(-4px); border-color:var(--gold); }
+    .logo-card img { height:48px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1); }
+    .logo-card-name { font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:4px; }
+    .logo-card-type { font-size:.75rem; color:var(--muted); }
+
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+    .service-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:32px; }
+    .service-card h4 { font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:12px; }
+    .service-card p { font-size:.9rem; color:var(--muted); line-height:1.7; }
+
+    .cta-section { text-align:center; padding:100px 24px; background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%); }
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../../#hero" class="nav-logo">
+      <img src="../../images/logo.png" alt="Butts Studios" class="nav-logo-img" />
+      <span class="nav-logo-text"><span>Butts</span> Studios</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../#services">Services</a></li>
+      <li><a href="../../#portfolio">Work</a></li>
+      <li><a href="../">Clients</a></li>
+      <li><a href="../../#subsidiaries">Projects</a></li>
+      <li><a href="../../#process">Process</a></li>
+      <li><a href="../../#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="../../#contact" class="btn btn-primary" style="padding:10px 20px;font-size:.82rem;">Get in Touch</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../../#services" class="mobile-link">Services</a>
+  <a href="../../#portfolio" class="mobile-link">Work</a>
+  <a href="../" class="mobile-link">Clients</a>
+  <a href="../../#subsidiaries" class="mobile-link">Projects</a>
+  <a href="../../#process" class="mobile-link">Process</a>
+  <a href="../../#about" class="mobile-link">About</a>
+  <a href="../../#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <img src="./huntington_applied-logo-primary.png" alt="Huntington Applied" class="page-client-logo" />
+    <h1 class="page-title">Huntington Applied</h1>
+    <p class="page-tagline">Visual Identity System for 16 Products Across Biological Intelligence, Simulation, and Enterprise Software</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">16</div>
+        <div class="hero-stat-label">Products</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">7</div>
+        <div class="hero-stat-label">Full Brands</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Design Systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES DELIVERED -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">What We Delivered</span>
+      <h2 class="section-title">Brand & Design Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h4>Visual Identity Design</h4>
+        <p>Complete logo design and visual identity systems for 7 products, with consistent yet distinct brand expressions across the Huntington Applied portfolio.</p>
+      </div>
+      <div class="service-card">
+        <h4>Design Systems</h4>
+        <p>Comprehensive design systems including color palettes, typography, iconography, and UI component libraries ensuring consistency across all platforms.</p>
+      </div>
+      <div class="service-card">
+        <h4>UI Assets</h4>
+        <p>Hero backgrounds, banner images, body graphics, and footer designs optimized for web and mobile interfaces across all 16 products.</p>
+      </div>
+      <div class="service-card">
+        <h4>Brand Guidelines</h4>
+        <p>Detailed brand guidelines document for each product, ensuring consistent application of visual identity across teams and touchpoints.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO SHOWCASE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Brand Identity</span>
+      <h2 class="section-title">Logo Design</h2>
+      <p class="section-sub">Distinctive visual identities crafted for each product while maintaining portfolio cohesion.</p>
+    </div>
+    <div class="logo-showcase">
+      <div class="logo-card">
+        <img src="./projects/sage/logo-primary.svg" alt="Sage Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Sage</div>
+        <div class="logo-card-type">Biological Intelligence</div>
+      </div>
+      <div class="logo-card">
+        <img src="./projects/blacklab/logo-primary.svg" alt="Blacklab Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Blacklab</div>
+        <div class="logo-card-type">Simulation & Inference</div>
+      </div>
+      <div class="logo-card">
+        <img src="./projects/chief/logo-primary.svg" alt="Chief Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Chief</div>
+        <div class="logo-card-type">Smart Card Platform</div>
+      </div>
+      <div class="logo-card">
+        <img src="./projects/chrona/logo-primary.svg" alt="Chrona Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Chrona</div>
+        <div class="logo-card-type">RF Emulation</div>
+      </div>
+      <div class="logo-card">
+        <img src="./projects/kitch/logo-primary.svg" alt="Kitch Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Kitch</div>
+        <div class="logo-card-type">Influencer Marketing</div>
+      </div>
+      <div class="logo-card">
+        <img src="./projects/nods/logo-primary.svg" alt="Nods Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Nods</div>
+        <div class="logo-card-type">Workspace Orchestrator</div>
+      </div>
+      <div class="logo-card">
+        <img src="./projects/rigor/logo-primary.svg" alt="Rigor Logo" onerror="this.style.display='none'" />
+        <div class="logo-card-name">Rigor</div>
+        <div class="logo-card-type">Social Logic Coordination</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT SHOWCASE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Product Portfolio</span>
+      <h2 class="section-title">Full Brand Projects</h2>
+      <p class="section-sub">7 products with complete visual identity systems including logos and screenshots.</p>
+    </div>
+    <div class="projects-grid">
+      
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/sage/screenshot.png" alt="Sage" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/sage/logo-primary.svg" alt="Sage Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Sage</h3>
+          <div class="project-card-type">Biological Intelligence Platform</div>
+          <p class="project-card-desc">AI-powered platform for biological simulation and analysis, enabling researchers to model complex biological systems with unprecedented accuracy.</p>
+        </div>
+      </div>
+
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/blacklab/screenshot.png" alt="Blacklab" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/blacklab/logo-primary.svg" alt="Blacklab Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Blacklab</h3>
+          <div class="project-card-type">Decentralized Simulation & Inference</div>
+          <p class="project-card-desc">Network infrastructure for distributed simulation and inference computing, enabling large-scale computational workflows across decentralized resources.</p>
+        </div>
+      </div>
+
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/chief/screenshot.png" alt="Chief" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/chief/logo-primary.svg" alt="Chief Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Chief</h3>
+          <div class="project-card-type">Accessible Smart Card Platform</div>
+          <p class="project-card-desc">Enterprise platform for smart card deployment and management, providing accessible solutions for identity and payment systems.</p>
+        </div>
+      </div>
+
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/chrona/screenshot.png" alt="Chrona" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/chrona/logo-primary.svg" alt="Chrona Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Chrona</h3>
+          <div class="project-card-type">RF Scenario Emulation</div>
+          <p class="project-card-desc">Real-time radio frequency scenario emulation and localization validation platform for testing and verification of wireless systems.</p>
+        </div>
+      </div>
+
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/kitch/screenshot.png" alt="Kitch" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/kitch/logo-primary.svg" alt="Kitch Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Kitch</h3>
+          <div class="project-card-type">Influencer Marketing Platform</div>
+          <p class="project-card-desc">Multi-party workflow orchestration connecting brands with micro-influencers through AI-driven matching and automated campaign management.</p>
+        </div>
+      </div>
+
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/nods/screenshot.png" alt="Nods" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/nods/logo-primary.svg" alt="Nods Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Nods</h3>
+          <div class="project-card-type">Terminal Workspace Orchestrator</div>
+          <p class="project-card-desc">Developer productivity platform providing terminal workspace orchestration and management for efficient command-line workflows.</p>
+        </div>
+      </div>
+
+      <div class="project-card has-logo">
+        <div class="project-card-img">
+          <img src="./projects/rigor/screenshot.png" alt="Rigor" />
+        </div>
+        <div class="project-card-body">
+          <img src="./projects/rigor/logo-primary.svg" alt="Rigor Logo" class="project-card-logo" onerror="this.style.display='none'" />
+          <h3 class="project-card-title">Rigor</h3>
+          <div class="project-card-type">Social Logic Coordination</div>
+          <p class="project-card-desc">Platform for coordinating complex social interactions and logic flows, enabling sophisticated automation of social processes.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MORE PRODUCTS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Expanding Portfolio</span>
+      <h2 class="section-title">Additional Products</h2>
+      <p class="section-sub">UI assets and design systems for 9 additional products in the Huntington Applied ecosystem.</p>
+    </div>
+    <div class="projects-grid">
+      
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">⚡</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Boltzmann</h3>
+          <div class="project-card-type">Multiphysics Simulation Intelligence</div>
+          <p class="project-card-desc">Device architecture generation through advanced multiphysics simulation and optimization.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">🌊</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Bora</h3>
+          <div class="project-card-type">Distributed Project Teams</div>
+          <p class="project-card-desc">Contribution-aware economic infrastructure for managing distributed project teams.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">🛡️</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Farad</h3>
+          <div class="project-card-type">Cyber Simulation Intelligence</div>
+          <p class="project-card-desc">Advanced CSI platform for cyber simulation and threat analysis.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">🗳️</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Fasci</h3>
+          <div class="project-card-type">Civic Engagement Platform</div>
+          <p class="project-card-desc">Verifiable civic engagement platform enabling democratic participation.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">⛰️</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Landslide</h3>
+          <div class="project-card-type">Stochastic Intelligence</div>
+          <p class="project-card-desc">Multi-domain stochastic intelligence and trigger scenario generation.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">📄</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Scanner</h3>
+          <div class="project-card-type">Document Processing</div>
+          <p class="project-card-desc">Comprehensive document processing platform for enterprise workflows.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">👁️</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Sentinel</h3>
+          <div class="project-card-type">Codebase Integrity</div>
+          <p class="project-card-desc">Codebase and documentation integrity platform for software quality.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">🚛</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">SLAI</h3>
+          <div class="project-card-type">Freight Load Optimization</div>
+          <p class="project-card-desc">SmartLoad AI for freight load optimization and real-time tracking.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:2rem; color:var(--gold);">📺</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Tea</h3>
+          <div class="project-card-type">Multi-Livestream Intelligence</div>
+          <p class="project-card-desc">AI-enhanced platform for multi-livestream intelligence and analytics.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="section-title" style="margin-bottom:16px;">Start Your Project</h2>
+  <p class="section-sub" style="margin-bottom:32px;">Ready to build a comprehensive visual identity for your product portfolio?</p>
+  <a href="../../#contact" class="btn btn-primary">Get in Touch ↗</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../../#hero" class="nav-logo" style="display:inline-flex"><img src="../../images/logo.png" alt="Butts Studios" class="footer-logo-img" /><span class="nav-logo-text"><span>Butts</span> Studios</span></a>
+        <p>Creating Stories, Building Worlds.</p>
+      </div>
+      <div class="footer-col"><h4>Pillars</h4><ul><li><a href="../../#services">Services</a></li><li><a href="../../#portfolio">Work</a></li><li><a href="../">Clients</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="../../#about">About</a></li><li><a href="../../#process">Process</a></li><li><a href="../../#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Butts Studios. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

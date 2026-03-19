@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clients — Butts Studios</title>
+  <meta name="description" content="Client work and case studies from Butts Studios. Creative production for Huntington Applied and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { min-height:60vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 24px 80px; position:relative; background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%); }
+    .page-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 50% 30%, rgba(245,184,0,.12) 0%, transparent 70%); }
+    .page-hero-content { position:relative; z-index:2; }
+    .page-eyebrow { font-size:.7rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:16px; }
+    .page-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:900; line-height:1.1; margin-bottom:20px; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-subtitle { font-size:1.1rem; color:var(--muted); max-width:560px; margin:0 auto; }
+
+    .clients-section { padding:100px 0; }
+    .client-card { background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform .3s, box-shadow .3s; }
+    .client-card:hover { transform:translateY(-6px); box-shadow:0 20px 60px rgba(245,184,0,.15); }
+    .client-card-img { width:100%; height:280px; object-fit:cover; }
+    .client-card-body { padding:32px; }
+    .client-card-logo { height:40px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1); }
+    .client-card-title { font-size:1.5rem; font-weight:700; color:var(--text); margin-bottom:8px; }
+    .client-card-desc { color:var(--muted); font-size:.95rem; line-height:1.6; margin-bottom:20px; }
+    .client-card-stats { display:flex; gap:24px; margin-bottom:24px; }
+    .client-stat { text-align:center; }
+    .client-stat-num { font-size:1.8rem; font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .client-stat-label { font-size:.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; }
+    .client-card-link { display:inline-flex; align-items:center; gap:8px; color:var(--gold); font-weight:600; text-decoration:none; transition:gap .3s; }
+    .client-card-link:hover { gap:14px; }
+
+    .cta-section { text-align:center; padding:80px 24px; background:var(--surface); border-top:1px solid var(--border); }
+    .cta-title { font-size:1.8rem; font-weight:700; color:var(--text); margin-bottom:12px; }
+    .cta-sub { color:var(--muted); margin-bottom:28px; }
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../#hero" class="nav-logo">
+      <img src="../images/logo.png" alt="Butts Studios" class="nav-logo-img" />
+      <span class="nav-logo-text"><span>Butts</span> Studios</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../#services">Services</a></li>
+      <li><a href="../#portfolio">Work</a></li>
+      <li><a href="./">Clients</a></li>
+      <li><a href="../#subsidiaries">Projects</a></li>
+      <li><a href="../#process">Process</a></li>
+      <li><a href="../#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="../#contact" class="btn btn-primary" style="padding:10px 20px;font-size:.82rem;">Get in Touch</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../#services" class="mobile-link">Services</a>
+  <a href="../#portfolio" class="mobile-link">Work</a>
+  <a href="./" class="mobile-link">Clients</a>
+  <a href="../#subsidiaries" class="mobile-link">Projects</a>
+  <a href="../#process" class="mobile-link">Process</a>
+  <a href="../#about" class="mobile-link">About</a>
+  <a href="../#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-eyebrow">Selected Work</div>
+    <h1 class="page-title">Our Clients</h1>
+    <p class="page-subtitle">Creative production partnerships delivering brand identities, design systems, and digital experiences for innovative companies.</p>
+  </div>
+</section>
+
+<!-- CLIENTS GRID -->
+<section class="clients-section">
+  <div class="container">
+    <div class="clients-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:40px;max-width:900px;margin:0 auto;">
+      
+      <!-- HUNTINGTON APPLIED -->
+      <div class="client-card">
+        <img src="./huntington-applied/projects/sage/screenshot.png" alt="Huntington Applied" class="client-card-img" />
+        <div class="client-card-body">
+          <img src="./huntington-applied/huntington_applied-logo-primary.png" alt="Huntington Applied" class="client-card-logo" />
+          <h3 class="client-card-title">Huntington Applied</h3>
+          <p class="client-card-desc">Complete visual identity system and brand design for a portfolio of 16 interconnected products and platforms spanning biological intelligence, simulation networks, and enterprise software.</p>
+          <div class="client-card-stats">
+            <div class="client-stat">
+              <div class="client-stat-num">16</div>
+              <div class="client-stat-label">Products</div>
+            </div>
+            <div class="client-stat">
+              <div class="client-stat-num">7</div>
+              <div class="client-stat-label">Full Brands</div>
+            </div>
+            <div class="client-stat">
+              <div class="client-stat-num">100%</div>
+              <div class="client-stat-label">Design System</div>
+            </div>
+          </div>
+          <a href="./huntington-applied/" class="client-card-link">View Case Study ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="cta-title">Ready to build something?</h2>
+  <p class="cta-sub">Let's discuss your next creative project.</p>
+  <a href="../#contact" class="btn btn-primary">Start a Project ↗</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../#hero" class="nav-logo" style="display:inline-flex"><img src="../images/logo.png" alt="Butts Studios" class="footer-logo-img" /><span class="nav-logo-text"><span>Butts</span> Studios</span></a>
+        <p>Creating Stories, Building Worlds.</p>
+      </div>
+      <div class="footer-col"><h4>Pillars</h4><ul><li><a href="../#services">Services</a></li><li><a href="../#portfolio">Work</a></li><li><a href="./">Clients</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="../#about">About</a></li><li><a href="../#process">Process</a></li><li><a href="../#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Butts Studios. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
