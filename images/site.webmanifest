@@ -1,0 +1,21 @@
+{
+  "name": "Butts Studios",
+  "short_name": "Butts",
+  "description": "Creative production studio for animation, film, branding, and games",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#9C27B0",
+  "theme_color": "#9C27B0",
+  "icons": [
+    {
+      "src": "images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
