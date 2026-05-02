@@ -1,0 +1,13 @@
+# robots.txt for buttsstudios.com
+User-agent: *
+Allow: /
+
+# Disallow internal paths
+Disallow: /internal/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://buttsstudios.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
