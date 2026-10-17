@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/refund", "destination": "/refunds", "permanent": true },
+    { "source": "/the-signal", "destination": "https://novels.buttsstudios.com/", "permanent": true },
+    { "source": "/the-signal/", "destination": "https://novels.buttsstudios.com/", "permanent": true }
+  ]
+}
